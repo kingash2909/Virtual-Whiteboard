@@ -1,21 +1,30 @@
 <!doctype html>
 <html>
+
 <head>
-        <!-- Add Title tag here and give tite as Virtual Whiteboard -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="//www.1.com/marketing/bundles/marketing/img/favicons/favicon.ico">
+    <title>Virtual Whiteboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
 <body>
-
-    <!-- Add start center tag here -->
-        <!-- Add H1 tag and define heading as "Virtual WhiteBoard" -->
-    <!-- Add end center tag here -->
-    
-    <!-- Define Paragraph tag and add small desc about this Virtual Whiteboard webapp -->
-   
-    <!-- Define button tag and Name it as Brush Color -->
-    <!-- Define another button tag and Name it as Clear -->
-    
-        
+    <center>
+        <h1>Virtual Whiteboard</h1> 
+    </center>
+    <div class="tips">
+        <p id="message">Initializing Sync...</p>
+        <p>Open this page in a few tabs to test!</p>
+    </div>
+    <div class="buttons">
+        <button id="color-btn" class="btn">Change Color</button>
+        <button id="clear-btn" class="btn">Clear</button>
+    </div>
+    <canvas class="whiteboard"></canvas>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://media.twiliocdn.com/sdk/js/sync/releases/0.12.4/twilio-sync.min.js"></script>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
 </body>
 
 </html>
