@@ -39,4 +39,4 @@ def generate_token():
     # create a Sync grant and add to token
     sync_grant = SyncGrant(TWILIO_SYNC_SERVICE_SID)
     token.add_grant(sync_grant)
-    return jsonify(identity=username, token=token.to_jwt().decode())
+    return jsonify(identity=username, token=token.to_jwt())
